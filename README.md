@@ -48,7 +48,7 @@
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/alijayanet/gembok-bill.git
+git clone https://github.com/heruhendri/gembok-bill.git
 ```
 ```bash
 cd gembok-bill
