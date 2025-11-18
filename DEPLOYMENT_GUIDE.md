@@ -30,7 +30,7 @@ gembok-bill/
 ### 1. Clone Repository
 
 ```bash
-git clone <url-repository-anda>
+git clone https://github.com/heruhendri/gembok-bill.git
 cd gembok-bill
 ```
 
