@@ -1,46 +1,53 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-/**
- * Script to check the current WhatsApp Web version
- */
-
-const { fetchLatestBaileysVersion } = require('@whiskeysockets/baileys');
-
+// Fungsi untuk memeriksa versi WhatsApp Web yang kompatibel
 async function checkWhatsAppVersion() {
     try {
-        console.log('🔍 Checking latest WhatsApp Web version...');
+        console.log('Memeriksa versi WhatsApp Web yang kompatibel...');
         
-        const versionResult = await fetchLatestBaileysVersion();
-        let version;
+        // Versi Baileys yang digunakan
+        const baileysPkg = require('../package.json');
+        const baileysVersion = baileysPkg.dependencies['@whiskeysockets/baileys'];
+        console.log(`Versi Baileys yang diinstal: ${baileysVersion}`);
         
-        // Tangani berbagai tipe return value
-        if (Array.isArray(versionResult)) {
-            version = versionResult;
-        } else if (versionResult && Array.isArray(versionResult.version)) {
-            version = versionResult.version;
-        } else if (versionResult && typeof versionResult === 'object') {
-            // Jika merupakan objek, coba cari properti version
-            version = versionResult.version || [2, 3000, 1023223821];
+        // Cek apakah direktori node_modules ada
+        const nodeModulesPath = path.join(__dirname, '../node_modules/@whiskeysockets/baileys');
+        if (fs.existsSync(nodeModulesPath)) {
+            console.log('Direktori Baileys ditemukan');
+            
+            // Cek versi package.json di node_modules
+            try {
+                const installedPkg = require('../node_modules/@whiskeysockets/baileys/package.json');
+                console.log(`Versi Baileys yang terinstal: ${installedPkg.version}`);
+            } catch (pkgError) {
+                console.log('Tidak dapat membaca package.json dari node_modules');
+            }
+            
+            // Cek versi WhatsApp Web
+            try {
+                const versionFilePath = path.join(__dirname, '../node_modules/@whiskeysockets/baileys/lib/Defaults/baileys-version.json');
+                if (fs.existsSync(versionFilePath)) {
+                    const versionData = JSON.parse(fs.readFileSync(versionFilePath, 'utf8'));
+                    console.log('Versi WhatsApp Web saat ini:', versionData);
+                } else {
+                    console.log('File versi tidak ditemukan, menggunakan versi default');
+                }
+            } catch (versionError) {
+                console.log('Tidak dapat membaca versi WhatsApp Web:', versionError.message);
+            }
         } else {
-            // Fallback
-            version = [2, 3000, 1023223821];
+            console.log('Direktori node_modules/@whiskeysockets/baileys tidak ditemukan');
         }
         
-        console.log(`📱 Latest WhatsApp Web version: ${Array.isArray(version) ? version.join('.') : JSON.stringify(version)}`);
+        console.log('✅ Pemeriksaan versi WhatsApp selesai');
+        process.exit(0);
         
-        // Also check the default version from Baileys
-        const defaultVersion = require('../node_modules/@whiskeysockets/baileys/lib/Defaults/baileys-version.json');
-        console.log(`📦 Default Baileys version: ${defaultVersion.version.join('.')}`);
-        
-        console.log('\n✅ Version check completed successfully');
     } catch (error) {
-        console.error('❌ Error checking WhatsApp version:', error.message);
-        
-        // Fallback to default version
-        const defaultVersion = require('../node_modules/@whiskeysockets/baileys/lib/Defaults/baileys-version.json');
-        console.log(`🔄 Using fallback version: ${defaultVersion.version.join('.')}`);
+        console.error('❌ Error saat memeriksa versi WhatsApp:', error.message);
+        process.exit(1);
     }
 }
 
-// Run the function
+// Jalankan pemeriksaan
 checkWhatsAppVersion();

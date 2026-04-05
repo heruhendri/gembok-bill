@@ -503,26 +503,10 @@ async function connectToWhatsApp() {
         });
         
         // Tangani credentials update
-        sock.ev.on('creds.update', saveCreds);
+        // Event listener messages.upsert dihapus karena file ini tidak digunakan
+        // Gunakan whatsapp.js sebagai file utama
         
-        // PERBAIKAN: Tangani pesan masuk dengan benar
-        sock.ev.on('messages.upsert', async ({ messages, type }) => {
-            if (type === 'notify') {
-                for (const message of messages) {
-                    if (!message.key.fromMe && message.message) {
-                        try {
-                            // Log pesan masuk untuk debugging
-                            console.log('Pesan masuk:', JSON.stringify(message, null, 2));
-                            
-                            // Panggil fungsi handleIncomingMessage
-                            await handleIncomingMessage(sock, message);
-                        } catch (error) {
-                            console.error('Error handling incoming message:', error);
-                        }
-                    }
-                }
-            }
-        });
+        sock.ev.on('creds.update', saveCreds);
         
         return sock;
     } catch (error) {
@@ -866,10 +850,6 @@ async function sendAdminMenuList(remoteJid) {
                 text: `❌ *ERROR*\n\nTerjadi kesalahan saat menampilkan menu admin:\n${error.message}` 
             });
         }
-    } catch (error) {
-        console.error('Error sending admin menu:', error);
-        await sendFormattedMessage(remoteJid, `❌ *ERROR*\n\nTerjadi kesalahan saat menampilkan menu admin:\n${error.message}`);
-    }
 }
 
 // Update fungsi getDeviceByNumber
@@ -3882,10 +3862,20 @@ function getSock() {
 // Fungsi untuk menangani pesan masuk dengan penanganan error dan logging yang lebih baik
 async function handleIncomingMessage(sock, message) {
     // Kirim pesan selamat datang ke super admin saat aplikasi pertama kali berjalan
-    if (!global.superAdminWelcomeSent) {
+    if (!global.superAdminWelcomeSent && getSetting('superadmin_welcome_enabled', true)) {
         try {
             await sock.sendMessage(superAdminNumber + '@s.whatsapp.net', {
-                text: `${getSetting('company_header', 'ALIJAYA BOT MANAGEMENT ISP')}\n👋 *Selamat datang, Super Admin!*\n\nAplikasi WhatsApp Bot berhasil dijalankan.\n\nRekening Donasi Untuk Pembangunan Masjid\n# 4206 0101 2214 534 BRI an DKM BAITUR ROHMAN\n\n${getSetting('footer_info', 'Internet Tanpa Batas')}`
+                text: `${getSetting('company_header', 'ALIJAYA BOT MANAGEMENT ISP')}
+👋 *Selamat datang*
+
+Aplikasi WhatsApp Bot berhasil dijalankan.
+
+Rekening Donasi Untuk Pengembangan aplikasi
+# 4206 01 003953 53 1 BRI an WARJAYA
+
+E-Wallet : 081947215703
+
+${getSetting('footer_info', 'Internet Tanpa Batas')}`
             });
             global.superAdminWelcomeSent = true;
             console.log('Pesan selamat datang terkirim ke super admin');

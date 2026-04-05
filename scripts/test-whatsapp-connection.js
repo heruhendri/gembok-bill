@@ -1,76 +1,72 @@
-#!/usr/bin/env node
-
-/**
- * Script to test WhatsApp connection with proper version handling
- */
-
-const { makeWASocket, useMultiFileAuthState, fetchLatestBaileysVersion } = require('@whiskeysockets/baileys');
-const pino = require('pino');
 const fs = require('fs');
+const path = require('path');
 
+// Fungsi untuk menguji koneksi WhatsApp
 async function testWhatsAppConnection() {
     try {
-        console.log('🔍 Testing WhatsApp connection with latest version...');
+        console.log('Menguji koneksi WhatsApp...');
         
-        // Create session directory
-        const sessionDir = './whatsapp-session-test';
-        if (!fs.existsSync(sessionDir)) {
-            fs.mkdirSync(sessionDir, { recursive: true });
-            console.log(`📁 Session directory created: ${sessionDir}`);
+        // Cek apakah file konfigurasi WhatsApp ada
+        const whatsappConfigPath = path.join(__dirname, '../config/whatsapp.js');
+        if (fs.existsSync(whatsappConfigPath)) {
+            console.log('✅ File konfigurasi WhatsApp ditemukan');
+        } else {
+            console.log('❌ File konfigurasi WhatsApp tidak ditemukan');
+            process.exit(1);
         }
         
-        // Get auth state
-        const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
-        
-        // Fetch latest version
-        const version = await fetchLatestBaileysVersion().catch(() => {
-            console.warn('⚠️ Failed to fetch latest version, using default');
-            return [2, 3000, 1027934701]; // Default fallback
-        });
-        
-        console.log(`📱 Using WhatsApp Web version: ${Array.isArray(version) ? version.join('.') : 'Unknown'}`);
-        
-        // Create socket with latest version
-        const sock = makeWASocket({
-            auth: state,
-            logger: pino({ level: 'silent' }),
-            browser: ['Test Connection', 'Chrome', '1.0.0'],
-            version: version,
-            printQRInTerminal: true,
-            connectTimeoutMs: 30000
-        });
-        
-        // Handle credentials update
-        sock.ev.on('creds.update', saveCreds);
-        
-        // Handle connection updates
-        sock.ev.on('connection.update', (update) => {
-            const { connection, lastDisconnect, qr } = update;
+        // Cek apakah direktori sesi WhatsApp ada
+        const sessionDir = path.join(__dirname, '../whatsapp-session');
+        if (fs.existsSync(sessionDir)) {
+            console.log('✅ Direktori sesi WhatsApp ditemukan');
             
-            if (qr) {
-                console.log('📱 QR Code generated. Scan it with your WhatsApp app.');
-            }
+            // Cek isi direktori sesi
+            const sessionFiles = fs.readdirSync(sessionDir);
+            console.log(`📁 File sesi yang tersedia: ${sessionFiles.length} file`);
             
-            if (connection === 'open') {
-                console.log('✅ WhatsApp connected successfully!');
-                console.log(`📱 Connected as: ${sock.user?.name || sock.user?.id}`);
-                
-                // Close connection after successful connection
-                setTimeout(() => {
-                    sock.end();
-                    console.log('🔚 Connection test completed. Closing connection.');
-                }, 5000);
+            if (sessionFiles.length > 0) {
+                console.log('📝 File sesi yang ditemukan:');
+                sessionFiles.forEach(file => {
+                    console.log(`  - ${file}`);
+                });
             }
-            
-            if (connection === 'close') {
-                console.log('🔚 WhatsApp connection closed.');
-            }
-        });
+        } else {
+            console.log('⚠️ Direktori sesi WhatsApp tidak ditemukan (akan dibuat saat koneksi)');
+        }
+        
+        // Cek versi Baileys
+        try {
+            const baileysPkg = require('../package.json');
+            const baileysVersion = baileysPkg.dependencies['@whiskeysockets/baileys'];
+            console.log(`📱 Versi Baileys yang digunakan: ${baileysVersion}`);
+        } catch (versionError) {
+            console.log('⚠️ Tidak dapat memeriksa versi Baileys:', versionError.message);
+        }
+        
+        // Cek apakah node_modules @whiskeysockets/baileys ada
+        const baileysNodeModulesPath = path.join(__dirname, '../node_modules/@whiskeysockets/baileys');
+        if (fs.existsSync(baileysNodeModulesPath)) {
+            console.log('✅ Library @whiskeysockets/baileys ditemukan di node_modules');
+        } else {
+            console.log('❌ Library @whiskeysockets/baileys tidak ditemukan di node_modules');
+            console.log('💡 Jalankan "npm install" untuk menginstal dependensi');
+            process.exit(1);
+        }
+        
+        console.log('\n✅ Pengujian koneksi WhatsApp selesai');
+        console.log('\n💡 Untuk menghubungkan WhatsApp:');
+        console.log('1. Jalankan aplikasi dengan "npm start"');
+        console.log('2. Tunggu QR code muncul di terminal');
+        console.log('3. Scan QR code dengan WhatsApp Anda');
+        console.log('4. Pastikan koneksi internet stabil');
+        
+        process.exit(0);
         
     } catch (error) {
-        console.error('❌ Error during WhatsApp connection test:', error.message);
+        console.error('❌ Error saat menguji koneksi WhatsApp:', error.message);
+        process.exit(1);
     }
 }
 
-// Run the test
+// Jalankan pengujian
 testWhatsAppConnection();

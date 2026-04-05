@@ -108,7 +108,7 @@ Layanan internet Anda telah dinonaktifkan karena:
 2. Layanan akan aktif otomatis setelah pembayaran dikonfirmasi
 
 📞 *Butuh Bantuan?*
-Hubungi kami di: ${getSetting('contact_whatsapp', '081947215703')}
+Hubungi kami di: {contact_whatsapp}
 
 *${getCompanyHeader()}*
 Terima kasih atas perhatian Anda.`,
@@ -131,7 +131,7 @@ Selamat! Layanan internet Anda telah diaktifkan kembali.
 Terima kasih telah melakukan pembayaran tepat waktu.
 
 *${getCompanyHeader()}*
-Info: ${getSetting('contact_whatsapp', '081947215703')}`,
+Info: {contact_whatsapp}`,
                 enabled: true
             },
             welcome_message: {
@@ -143,8 +143,10 @@ Halo {customer_name},
 Selamat datang di layanan internet kami!
 
 📦 *Paket:* {package_name} ({package_speed})
-🔑 *Password WiFi:* {wifi_password}
 📞 *Support:* {support_phone}
+
+📱 *Untuk menggunakan layanan WhatsApp:*
+Ketik: REG {customer_name}
 
 Terima kasih telah memilih layanan kami.`,
                 enabled: true
@@ -207,7 +209,7 @@ Balas dengan: *MASALAH* atau *ISSUE*
 • *BANTU* - Minta bantuan teknis
 • *MASALAH* - Laporkan kendala
 
-📞 *Support:* ${getSetting('contact_whatsapp', '081947215703')}
+📞 *Support:* {contact_whatsapp}
 
 Silakan konfirmasi penerimaan tugas ini dengan balasan *TERIMA*.
 
@@ -307,15 +309,25 @@ Balas dengan: *BANTU* atau *HELP*
     }
 
     // Helper method to get invoice image path with fallback handling
-    getInvoiceImagePath() {
+    getInvoiceImagePath(packageData = null) {
+        // First check if package has custom image
+        if (packageData && packageData.image_filename) {
+            const packageImagePath = path.resolve(__dirname, `../public/img/packages/${packageData.image_filename}`);
+            if (fs.existsSync(packageImagePath)) {
+                logger.info(`📸 Using package image: ${packageImagePath}`);
+                return packageImagePath;
+            }
+        }
+
+        // Fallback to default invoice images
         const imagePaths = [
             path.resolve(__dirname, '../public/img/tagihan.jpg'),
-            path.resolve(__dirname, '../public/img/tagihan.png'), 
+            path.resolve(__dirname, '../public/img/tagihan.png'),
             path.resolve(__dirname, '../public/img/invoice.jpg'),
             path.resolve(__dirname, '../public/img/invoice.png'),
             path.resolve(__dirname, '../public/img/logo.png')
         ];
-        
+
         // Check each path and return the first one that exists
         for (const imagePath of imagePaths) {
             if (fs.existsSync(imagePath)) {
@@ -323,7 +335,7 @@ Balas dengan: *BANTU* atau *HELP*
                 return imagePath;
             }
         }
-        
+
         // Log if no image found (will send text-only)
         logger.warn(`⚠️ No invoice image found, will send text-only notification`);
         return null;
@@ -679,7 +691,7 @@ Balas dengan: *BANTU* atau *HELP*
             );
 
             // Attach invoice banner image if available
-            const imagePath = this.getInvoiceImagePath();
+            const imagePath = this.getInvoiceImagePath(packageData);
             return await this.sendNotification(customer.phone, message, { imagePath });
         } catch (error) {
             logger.error('Error sending invoice created notification:', error);
@@ -725,7 +737,7 @@ Balas dengan: *BANTU* atau *HELP*
             );
 
             // Attach same invoice banner image
-            const imagePath = this.getInvoiceImagePath();
+            const imagePath = this.getInvoiceImagePath(packageData);
             return await this.sendNotification(customer.phone, message, { imagePath });
         } catch (error) {
             logger.error('Error sending due date reminder:', error);
@@ -745,6 +757,7 @@ Balas dengan: *BANTU* atau *HELP*
             const payment = await billingManager.getPaymentById(paymentId);
             const invoice = await billingManager.getInvoiceById(payment.invoice_id);
             const customer = await billingManager.getCustomerById(invoice.customer_id);
+            const packageData = await billingManager.getPackageById(invoice.package_id);
 
             if (!payment || !invoice || !customer) {
                 logger.error('Missing data for payment notification');
@@ -766,7 +779,7 @@ Balas dengan: *BANTU* atau *HELP*
             );
 
             // Attach same invoice banner image
-            const imagePath = this.getInvoiceImagePath();
+            const imagePath = this.getInvoiceImagePath(packageData);
             return await this.sendNotification(customer.phone, message, { imagePath });
         } catch (error) {
             logger.error('Error sending payment received notification:', error);
@@ -790,7 +803,7 @@ Balas dengan: *BANTU* atau *HELP*
                 disruption_type: disruptionData.type || 'Gangguan Jaringan',
                 affected_area: disruptionData.area || 'Seluruh Area',
                 estimated_resolution: disruptionData.estimatedTime || 'Sedang dalam penanganan',
-                support_phone: getSetting('support_phone', '081947215703')
+                support_phone: getSetting('contact_whatsapp', '081947215703')
             };
 
             const message = this.replaceTemplateVariables(
@@ -989,7 +1002,8 @@ Balas dengan: *BANTU* atau *HELP*
                 this.templates.service_suspension.template,
                 {
                     customer_name: customer.name,
-                    reason: reason
+                    reason: reason,
+                    contact_whatsapp: getSetting('contact_whatsapp', '081947215703')
                 }
             );
 
@@ -1027,7 +1041,8 @@ Balas dengan: *BANTU* atau *HELP*
                     customer_name: customer.name,
                     package_name: customer.package_name || 'N/A',
                     package_speed: customer.package_speed || 'N/A',
-                    reason: reason || ''
+                    reason: reason || '',
+                    contact_whatsapp: getSetting('contact_whatsapp', '081947215703')
                 }
             );
 
@@ -1066,7 +1081,7 @@ Balas dengan: *BANTU* atau *HELP*
                     package_name: customer.package_name || 'N/A',
                     package_speed: customer.package_speed || 'N/A',
                     wifi_password: customer.wifi_password || 'N/A',
-                    support_phone: getSetting('support_phone', '081947215703')
+                    support_phone: getSetting('contact_whatsapp', '081947215703')
                 }
             );
 
@@ -1117,7 +1132,8 @@ Balas dengan: *BANTU* atau *HELP*
                     installation_time: installationJob.installation_time || 'TBD',
                     notes: installationJob.notes || 'Tidak ada catatan',
                     equipment_needed: installationJob.equipment_needed || 'Standard equipment',
-                    priority: installationJob.priority || 'Normal'
+                    priority: installationJob.priority || 'Normal',
+                    contact_whatsapp: getSetting('contact_whatsapp', '081947215703')
                 }
             );
 

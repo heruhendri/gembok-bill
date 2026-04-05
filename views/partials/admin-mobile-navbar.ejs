@@ -1,183 +1,123 @@
 <!-- Admin Mobile Bottom Navigation -->
-<nav class="admin-mobile-bottom-nav">
-    <div class="nav-item" onclick="navigateTo('/admin/billing/dashboard')">
-        <div class="nav-icon <%= currentPage === 'dashboard' ? 'active' : '' %>">
-            <i class="bx bx-home"></i>
-        </div>
-        <span class="nav-label">Dashboard</span>
-    </div>
-    
-    <div class="nav-item" onclick="navigateTo('/admin/billing/customers')">
-        <div class="nav-icon <%= currentPage === 'customers' ? 'active' : '' %>">
-            <i class="bx bx-user"></i>
-        </div>
-        <span class="nav-label">Pelanggan</span>
-    </div>
-    
-    <div class="nav-item" onclick="navigateTo('/admin/billing/invoices')">
-        <div class="nav-icon <%= currentPage === 'invoices' ? 'active' : '' %>">
-            <i class="bx bx-receipt"></i>
-        </div>
-        <span class="nav-label">Tagihan</span>
-    </div>
-    
-    <div class="nav-item" onclick="navigateTo('/admin/billing/payments')">
-        <div class="nav-icon <%= currentPage === 'payments' ? 'active' : '' %>">
-            <i class="bx bx-credit-card"></i>
-        </div>
-        <span class="nav-label">Pembayaran</span>
-    </div>
-    
-    <div class="nav-item" onclick="navigateTo('/admin/billing/mapping')">
-        <div class="nav-icon <%= currentPage === 'mapping' ? 'active' : '' %>">
-            <i class="bx bx-map"></i>
-        </div>
-        <span class="nav-label">Peta</span>
-    </div>
+<nav class="admin-bottom-nav d-md-none">
+    <!-- Pelanggan -->
+    <a class="bot-nav-item <%= typeof currentPage !== 'undefined' && currentPage === 'customers' ? 'active' : '' %>"
+        href="/admin/billing/customers">
+        <i class="bi bi-people" style="font-size: 1.2rem;"></i>
+        <span style="font-size: 0.7rem; font-weight: 500;">Pelanggan</span>
+    </a>
+
+    <!-- Tagihan -->
+    <a class="bot-nav-item <%= typeof currentPage !== 'undefined' && currentPage === 'invoices' ? 'active' : '' %>"
+        href="/admin/billing/invoices">
+        <i class="bi bi-receipt" style="font-size: 1.2rem;"></i>
+        <span style="font-size: 0.7rem; font-weight: 500;">Tagihan</span>
+    </a>
+
+    <!-- Home -->
+    <a class="bot-nav-item <%= typeof currentPage !== 'undefined' && currentPage === 'dashboard' ? 'active' : '' %>"
+        href="/admin/billing/dashboard">
+        <i class="bi bi-house" style="font-size: 1.2rem;"></i>
+        <span style="font-size: 0.7rem; font-weight: 500;">Home</span>
+    </a>
+
+    <!-- Bayar -->
+    <a class="bot-nav-item <%= typeof currentPage !== 'undefined' && currentPage === 'payments' ? 'active' : '' %>"
+        href="/admin/billing/payments">
+        <i class="bi bi-credit-card" style="font-size: 1.2rem;"></i>
+        <span style="font-size: 0.7rem; font-weight: 500;">Bayar</span>
+    </a>
+
+    <!-- Map -->
+    <a class="bot-nav-item <%= typeof currentPage !== 'undefined' && currentPage === 'mapping' ? 'active' : '' %>"
+        href="/admin/billing/mapping-new">
+        <i class="bi bi-geo-alt" style="font-size: 1.2rem;"></i>
+        <span style="font-size: 0.7rem; font-weight: 500;">Map</span>
+    </a>
+
+    <!-- Setting -->
+    <a class="bot-nav-item <%= typeof currentPage !== 'undefined' && currentPage === 'settings' ? 'active' : '' %>"
+        href="/admin/billing/payment-settings">
+        <i class="bi bi-gear" style="font-size: 1.2rem;"></i>
+        <span style="font-size: 0.7rem; font-weight: 500;">Setting</span>
+    </a>
 </nav>
 
 <style>
-.admin-mobile-bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 8px 0;
-    z-index: 1000;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.admin-mobile-bottom-nav .nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    min-width: 60px;
-}
-
-.admin-mobile-bottom-nav .nav-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-}
-
-.admin-mobile-bottom-nav .nav-icon {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    margin-bottom: 4px;
-    transition: all 0.3s ease;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 18px;
-}
-
-.admin-mobile-bottom-nav .nav-icon.active {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    transform: scale(1.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.admin-mobile-bottom-nav .nav-label {
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 500;
-    text-align: center;
-    line-height: 1.2;
-}
-
-.admin-mobile-bottom-nav .nav-item:hover .nav-icon {
-    color: white;
-    transform: scale(1.05);
-}
-
-.admin-mobile-bottom-nav .nav-item:hover .nav-label {
-    color: white;
-}
-
-/* Desktop - hide mobile navbar */
-@media (min-width: 769px) {
-    .admin-mobile-bottom-nav {
-        display: none;
-    }
-}
-
-/* Mobile - show navbar and add bottom padding */
-@media (max-width: 768px) {
-    body {
-        padding-bottom: 80px;
-    }
-    
-    .admin-mobile-bottom-nav {
-        display: flex;
-    }
-    
-    /* Hide sidebar on mobile */
-    .sidebar {
-        transform: translateX(-100%);
-    }
-    
-    .sidebar.show {
-        transform: translateX(0);
-    }
-}
-
-/* Ensure main content doesn't overlap with navbar */
-@media (max-width: 768px) {
-    .main-content {
-        margin-bottom: 80px;
-        margin-left: 0 !important;
+    /* Bottom Navigation Styles - Fixed to avoid Bootstrap conflicts */
+    .admin-bottom-nav {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
         width: 100% !important;
+        max-width: 100vw !important;
+        background: linear-gradient(180deg, rgba(11, 20, 55, 0.96), rgba(15, 28, 79, 0.96)) !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+        height: 70px !important;
+        display: grid !important;
+        grid-template-columns: repeat(6, 1fr) !important;
+        z-index: 1035 !important;
+        backdrop-filter: blur(10px) !important;
+        padding: 8px 4px !important;
+        margin: 0 !important;
+        overflow: hidden !important;
     }
-}
-</style>
 
-<script>
-function navigateTo(url) {
-    // Add loading animation
-    const navItem = event.currentTarget;
-    const icon = navItem.querySelector('.nav-icon');
-    icon.style.transform = 'scale(0.9)';
-    
-    setTimeout(() => {
-        window.location.href = url;
-    }, 150);
-}
+    .bot-nav-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 2px !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        text-decoration: none !important;
+        transition: all 0.2s ease !important;
+        min-width: 0 !important;
+        /* Crucial for grid item compression */
+        text-align: center !important;
+    }
 
-// Add active state management
-document.addEventListener('DOMContentLoaded', function() {
-    const currentPath = window.location.pathname;
-    const navItems = document.querySelectorAll('.admin-mobile-bottom-nav .nav-item');
-    
-    navItems.forEach(item => {
-        const icon = item.querySelector('.nav-icon');
-        const label = item.querySelector('.nav-label');
-        
-        // Reset all items
-        icon.classList.remove('active');
-        
-        // Check if current path matches this nav item
-        if (currentPath.includes('/dashboard') && label.textContent === 'Dashboard') {
-            icon.classList.add('active');
-        } else if (currentPath.includes('/customers') && label.textContent === 'Pelanggan') {
-            icon.classList.add('active');
-        } else if (currentPath.includes('/invoices') && label.textContent === 'Tagihan') {
-            icon.classList.add('active');
-        } else if (currentPath.includes('/payments') && label.textContent === 'Pembayaran') {
-            icon.classList.add('active');
-        } else if (currentPath.includes('/mapping') && label.textContent === 'Peta') {
-            icon.classList.add('active');
+    .bot-nav-item:hover {
+        color: #667eea !important;
+        transform: translateY(-2px) !important;
+    }
+
+    .bot-nav-item.active {
+        color: #667eea !important;
+        font-weight: bold !important;
+    }
+
+    .bot-nav-item i {
+        font-size: 1.1rem !important;
+        line-height: 1 !important;
+    }
+
+    .bot-nav-item span {
+        font-size: 0.65rem !important;
+        font-weight: 500 !important;
+        display: block !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+
+    /* Add padding to body for mobile */
+    @media (max-width: 768px) {
+        body {
+            padding-bottom: 80px !important;
         }
-    });
-});
-</script>
+    }
+
+    @media (min-width: 768px) {
+        .admin-bottom-nav {
+            display: none !important;
+        }
+    }
+
+    /* Hide bottom nav when modal is open to prevent covering modal buttons */
+    body.modal-open .admin-bottom-nav {
+        display: none !important;
+    }
+</style>

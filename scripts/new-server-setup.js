@@ -11,7 +11,7 @@ const path = require('path');
 // Function to ensure app_settings table exists
 async function ensureAppSettingsTable(db) {
     console.log('🔧 Ensuring app_settings table exists...');
-    
+
     return new Promise((resolve, reject) => {
         // Create app_settings table if it doesn't exist
         const createTableSQL = `
@@ -23,7 +23,7 @@ async function ensureAppSettingsTable(db) {
                 updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
             )
         `;
-        
+
         db.run(createTableSQL, (err) => {
             if (err) {
                 console.error('❌ Failed to create app_settings table:', err.message);
@@ -36,10 +36,45 @@ async function ensureAppSettingsTable(db) {
     });
 }
 
+// Function to ensure collectors table has password column
+async function ensureCollectorsPasswordColumn(db) {
+    console.log('🔧 Checking collectors table for password column...');
+
+    return new Promise((resolve, reject) => {
+        // Check if password column exists
+        db.all('PRAGMA table_info(collectors)', (err, columns) => {
+            if (err) {
+                console.error('❌ Failed to check collectors table structure:', err.message);
+                reject(err);
+                return;
+            }
+
+            const hasPasswordColumn = columns.some(col => col.name === 'password');
+
+            if (hasPasswordColumn) {
+                console.log('   ✅ Password column already exists in collectors table');
+                resolve();
+            } else {
+                // Add password column
+                console.log('   ➕ Adding password column to collectors table...');
+                db.run('ALTER TABLE collectors ADD COLUMN password TEXT', (alterErr) => {
+                    if (alterErr) {
+                        console.error('❌ Failed to add password column:', alterErr.message);
+                        reject(alterErr);
+                    } else {
+                        console.log('   ✅ Password column added to collectors table');
+                        resolve();
+                    }
+                });
+            }
+        });
+    });
+}
+
 // Function to ensure essential tables exist
 async function ensureEssentialTables(db) {
     console.log('🔧 Ensuring essential tables exist...');
-    
+
     const essentialTables = [
         {
             name: 'packages',
@@ -126,7 +161,7 @@ async function ensureEssentialTables(db) {
             )`
         }
     ];
-    
+
     for (const table of essentialTables) {
         await new Promise((resolve, reject) => {
             db.run(table.sql, (err) => {
@@ -144,98 +179,85 @@ async function ensureEssentialTables(db) {
 
 async function runSqlMigrations(db) {
     console.log('\n🔧 Step 0: Running SQL migrations...');
-    
+
     // Get all SQL migration files
     const migrationsDir = path.join(__dirname, '../migrations');
-    
+
     // Check if migrations directory exists
     const fs = require('fs');
     if (!fs.existsSync(migrationsDir)) {
         console.log('   ⚠️  Migrations directory not found, skipping...');
         return;
     }
-    
+
     const migrationFiles = fs.readdirSync(migrationsDir)
         .filter(file => file.endsWith('.sql'))
         .sort(); // Sort to ensure proper order
-    
+
     console.log(`   📋 Found ${migrationFiles.length} migration files`);
-    
+
     // Run each migration
     for (const file of migrationFiles) {
         const filePath = path.join(migrationsDir, file);
         console.log(`   🚀 Running ${file}...`);
-        
+
         try {
             const sql = fs.readFileSync(filePath, 'utf8');
-            
-            // Split SQL by semicolon to handle multiple statements
-            const statements = sql
-                .split(';')
-                .map(stmt => stmt.trim())
-                .filter(stmt => stmt.length > 0);
-            
-            for (const statement of statements) {
-                const trimmedStatement = statement.trim();
-                if (trimmedStatement) {
-                    // Skip empty statements and transaction control
-                    if (trimmedStatement.toUpperCase() === 'BEGIN' || 
-                        trimmedStatement.toUpperCase() === 'COMMIT' ||
-                        trimmedStatement.toUpperCase() === 'END' ||
-                        trimmedStatement.toUpperCase() === 'ROLLBACK') {
-                        continue;
+
+            // Use db.exec() to run the entire script at once
+            // This handles triggers and multi-statement scripts correctly
+            await new Promise((resolve, reject) => {
+                db.exec(sql, function (err) {
+                    if (err) {
+                        // Check if the error is non-critical
+                        if (err.message.includes('duplicate') ||
+                            err.message.includes('already exists') ||
+                            err.message.includes('no such table') ||
+                            err.message.includes('no such column') ||
+                            err.message.includes('incomplete input') ||
+                            err.message.includes('not an error') ||
+                            err.message.includes('SQLITE_MISUSE') ||
+                            err.message.includes('Cannot add a UNIQUE column')) {
+                            console.log(`      ℹ️  Note: ${err.message} (continuing...)`);
+                            resolve();
+                        } else {
+                            console.log(`      ❌ Error in ${file}: ${err.message}`);
+                            resolve(); // Continue with other migrations
+                        }
+                    } else {
+                        resolve();
                     }
-                    
-                    await new Promise((resolve, reject) => {
-                        db.run(trimmedStatement, function(err) {
-                            if (err) {
-                                // Ignore errors for already existing columns/tables
-                                if (err.message.includes('duplicate') || 
-                                    err.message.includes('already exists') ||
-                                    err.message.includes('no such table') ||
-                                    err.message.includes('no such column') ||
-                                    err.message.includes('incomplete input') ||
-                                    err.message.includes('not an error') ||
-                                    err.message.includes('SQLITE_MISUSE')) {
-                                    console.log(`      ℹ️  ${err.message} (continuing...)`);
-                                    resolve();
-                                } else {
-                                    console.log(`      ❌ Error: ${err.message}`);
-                                    resolve(); // Continue with other migrations
-                                }
-                            } else {
-                                resolve();
-                            }
-                        });
-                    });
-                }
-            }
-            
+                });
+            });
+
             console.log(`   ✅ ${file} completed successfully`);
         } catch (error) {
             console.log(`   ⚠️  ${file} had issues: ${error.message} (continuing...)`);
         }
     }
-    
+
     console.log('   🎉 SQL migrations completed!\n');
 }
 
 async function newServerSetup() {
     const dbPath = path.join(__dirname, '../data/billing.db');
     const db = new sqlite3.Database(dbPath, sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE);
-    
+
     try {
         console.log('🚀 NEW SERVER SETUP - Setup Awal Server Baru...\n');
-        
+
         // Step 0: Run SQL migrations first
         await runSqlMigrations(db);
-        
+
         // Ensure essential tables exist
         await ensureEssentialTables(db);
-        
+
+        // Ensure collectors table has password column
+        await ensureCollectorsPasswordColumn(db);
+
         // Ensure app_settings table exists
         await ensureAppSettingsTable(db);
-        
+
         // Step 1: Set database optimizations
         console.log('⚙️  Step 1: Setting database optimizations...');
         await new Promise((resolve, reject) => {
@@ -244,25 +266,25 @@ async function newServerSetup() {
                 else resolve();
             });
         });
-        
+
         await new Promise((resolve, reject) => {
             db.run('PRAGMA busy_timeout=30000', (err) => {
                 if (err) reject(err);
                 else resolve();
             });
         });
-        
+
         await new Promise((resolve, reject) => {
             db.run('PRAGMA foreign_keys=ON', (err) => {
                 if (err) reject(err);
                 else resolve();
             });
         });
-        
+
         console.log('   ✅ WAL mode enabled');
         console.log('   ✅ Timeout configured');
         console.log('   ✅ Foreign keys enabled');
-        
+
         // Step 2: Create default packages
         console.log('\n📦 Step 2: Creating default packages...');
         const packages = [
@@ -291,7 +313,7 @@ async function newServerSetup() {
                 pppoe_profile: 'premium'
             }
         ];
-        
+
         const packageIds = [];
         for (const pkg of packages) {
             const packageId = await new Promise((resolve, reject) => {
@@ -300,7 +322,7 @@ async function newServerSetup() {
                     VALUES (?, ?, ?, ?, ?, ?, ?)
                 `, [
                     pkg.name, pkg.speed, pkg.price, 11, pkg.description, pkg.is_active, pkg.pppoe_profile
-                ], function(err) {
+                ], function (err) {
                     if (err) {
                         console.error(`❌ Failed to create package ${pkg.name}:`, err.message);
                         reject(err);
@@ -312,7 +334,7 @@ async function newServerSetup() {
             });
             packageIds.push(packageId);
         }
-        
+
         // Step 3: Create default collector
         console.log('\n👤 Step 3: Creating default collector...');
         const collectorId = await new Promise((resolve, reject) => {
@@ -323,13 +345,13 @@ async function newServerSetup() {
                     reject(err);
                     return;
                 }
-                
+
                 if (row) {
                     console.log('   ℹ️  Default collector already exists (ID: ' + row.id + ')');
                     resolve(row.id);
                     return;
                 }
-                
+
                 // Create new collector
                 db.run(`
                     INSERT INTO collectors (name, phone, email, commission_rate, status, created_at) 
@@ -340,7 +362,7 @@ async function newServerSetup() {
                     'kolektor@company.com',
                     10.0, // 10% commission
                     'active'
-                ], function(err) {
+                ], function (err) {
                     if (err) {
                         console.error('❌ Failed to create default collector:', err.message);
                         reject(err);
@@ -351,7 +373,7 @@ async function newServerSetup() {
                 });
             });
         });
-        
+
         // Step 4: Create default technician
         console.log('\n🔧 Step 4: Creating default technician...');
         const technicianId = await new Promise((resolve, reject) => {
@@ -362,13 +384,13 @@ async function newServerSetup() {
                     reject(err);
                     return;
                 }
-                
+
                 if (row) {
                     console.log('   ℹ️  Default technician already exists (ID: ' + row.id + ')');
                     resolve(row.id);
                     return;
                 }
-                
+
                 // Check table structure first
                 db.all("PRAGMA table_info(technicians)", [], (err, rows) => {
                     if (err) {
@@ -376,11 +398,11 @@ async function newServerSetup() {
                         reject(err);
                         return;
                     }
-                    
+
                     // Get available columns
                     const columns = rows.map(row => row.name);
                     console.log('   ℹ️  Available technician columns:', columns.join(', '));
-                    
+
                     // Build query based on available columns
                     let query, params;
                     if (columns.includes('join_date')) {
@@ -408,8 +430,8 @@ async function newServerSetup() {
                             1
                         ];
                     }
-                    
-                    db.run(query, params, function(err) {
+
+                    db.run(query, params, function (err) {
                         if (err) {
                             console.error('❌ Failed to create default technician:', err.message);
                             reject(err);
@@ -421,7 +443,7 @@ async function newServerSetup() {
                 });
             });
         });
-        
+
         // Step 5: Create sample customers
         console.log('\n👥 Step 5: Creating sample customers...');
         const customers = [
@@ -440,7 +462,7 @@ async function newServerSetup() {
                 address: 'Alamat Pelanggan Kedua'
             }
         ];
-        
+
         const customerIds = [];
         for (const customer of customers) {
             const customerId = await new Promise((resolve, reject) => {
@@ -449,7 +471,7 @@ async function newServerSetup() {
                     VALUES (?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
                 `, [
                     customer.username, customer.name, customer.phone, customer.email, customer.address, 'active'
-                ], function(err) {
+                ], function (err) {
                     if (err) {
                         console.error(`❌ Failed to create customer ${customer.username}:`, err.message);
                         reject(err);
@@ -461,12 +483,12 @@ async function newServerSetup() {
             });
             customerIds.push(customerId);
         }
-        
+
         // Step 6: Create sample invoices
         console.log('\n📄 Step 6: Creating sample invoices...');
         // Initialize invoiceIds array
         const invoiceIds = [];
-        
+
         // First check if we have customer and package IDs
         if (customerIds.length > 0 && packageIds.length > 0) {
             const invoices = [
@@ -489,16 +511,16 @@ async function newServerSetup() {
                     invoice_type: 'monthly'
                 }
             ];
-            
+
             for (const invoice of invoices) {
                 const invoiceId = await new Promise((resolve, reject) => {
                     db.run(`
                         INSERT OR IGNORE INTO invoices (customer_id, package_id, amount, status, due_date, created_at, invoice_number, invoice_type) 
                         VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP, ?, ?)
                     `, [
-                        invoice.customer_id, invoice.package_id, invoice.amount, invoice.status, 
+                        invoice.customer_id, invoice.package_id, invoice.amount, invoice.status,
                         invoice.due_date, invoice.invoice_number, invoice.invoice_type
-                    ], function(err) {
+                    ], function (err) {
                         if (err) {
                             console.error(`❌ Failed to create invoice ${invoice.invoice_number}:`, err.message);
                             reject(err);
@@ -513,7 +535,7 @@ async function newServerSetup() {
         } else {
             console.log('   ⚠️  Skipping invoice creation - no customers or packages available');
         }
-        
+
         // Step 7: Create app settings
         console.log('\n⚙️  Step 7: Creating app settings...');
         const settings = [
@@ -526,7 +548,7 @@ async function newServerSetup() {
             { key: 'currency', value: 'IDR' },
             { key: 'timezone', value: 'Asia/Jakarta' }
         ];
-        
+
         for (const setting of settings) {
             await new Promise((resolve, reject) => {
                 db.run(`
@@ -534,7 +556,7 @@ async function newServerSetup() {
                     VALUES (?, ?, CURRENT_TIMESTAMP)
                 `, [
                     setting.key, setting.value
-                ], function(err) {
+                ], function (err) {
                     if (err) {
                         console.error(`❌ Failed to create setting ${setting.key}:`, err.message);
                         reject(err);
@@ -545,7 +567,7 @@ async function newServerSetup() {
                 });
             });
         }
-        
+
         // Step 8: Final verification
         console.log('\n📊 Step 8: Final verification...');
         const finalStats = await new Promise((resolve, reject) => {
@@ -586,13 +608,13 @@ async function newServerSetup() {
                 else resolve(rows || []);
             });
         });
-        
+
         finalStats.forEach(stat => {
             console.log(`   📊 ${stat.table_name}: ${stat.count} records`);
         });
-        
+
         console.log('\n🎉 NEW SERVER SETUP COMPLETED!');
-        console.log('=' .repeat(60));
+        console.log('='.repeat(60));
         console.log('✅ Default packages created');
         console.log('✅ Default collector created');
         console.log('✅ Default technician created');
@@ -601,8 +623,8 @@ async function newServerSetup() {
         console.log('✅ App settings configured');
         console.log('✅ Database optimizations applied');
         console.log('✅ System ready for production');
-        console.log('=' .repeat(60));
-        
+        console.log('='.repeat(60));
+
         console.log('\n📋 Summary:');
         console.log(`   📦 Packages: ${packageIds.length} packages created`);
         console.log(`   👤 Collector: Kolektor Utama (10% commission)`);
@@ -612,14 +634,14 @@ async function newServerSetup() {
         console.log(`   ⚙️  Settings: ${settings.length} app settings`);
         console.log(`   💰 Payments: 0 (clean start)`);
         console.log(`   💸 Expenses: 0 (clean start)`);
-        
+
         console.log('\n🚀 Server is ready for production use!');
         console.log('   - Clean financial data');
         console.log('   - Default packages available');
         console.log('   - Collector system ready');
         console.log('   - Keuangan akan benar dari awal');
         console.log('   - Ready for new customers and payments');
-        
+
     } catch (error) {
         console.error('❌ Error during new server setup:', error);
         throw error;

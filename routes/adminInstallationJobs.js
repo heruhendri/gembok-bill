@@ -4,6 +4,7 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const { adminAuth } = require('./adminAuth');
 const { getSetting } = require('../config/settingsManager');
+const { getVersionInfo, getVersionBadge } = require('../config/version-utils');
 const logger = require('../config/logger');
 
 // Database connection
@@ -18,9 +19,9 @@ const billingManager = require('../config/billing');
  */
 router.get('/', adminAuth, async (req, res) => {
     try {
-        const page = parseInt(req.query.page) || 1;
+        const currentPage = parseInt(req.query.page) || 1;
         const limit = 20;
-        const offset = (page - 1) * limit;
+        const offset = (currentPage - 1) * limit;
         const search = req.query.search || '';
         const status = req.query.status || '';
         const technician = req.query.technician || '';
@@ -35,7 +36,7 @@ router.get('/', adminAuth, async (req, res) => {
         }
 
         if (status && status !== 'all') {
-            whereConditions.push('status = ?');
+            whereConditions.push('ij.status = ?');
             params.push(status);
         }
 
@@ -59,7 +60,7 @@ router.get('/', adminAuth, async (req, res) => {
                 ORDER BY ij.created_at DESC 
                 LIMIT ? OFFSET ?
             `;
-            
+
             db.all(query, [...params, limit, offset], (err, rows) => {
                 if (err) reject(err);
                 else resolve(rows);
@@ -68,7 +69,7 @@ router.get('/', adminAuth, async (req, res) => {
 
         // Get total count
         const totalJobs = await new Promise((resolve, reject) => {
-            const countQuery = `SELECT COUNT(*) as count FROM installation_jobs ${whereClause}`;
+            const countQuery = `SELECT COUNT(*) as count FROM installation_jobs ij ${whereClause}`;
             db.get(countQuery, params, (err, row) => {
                 if (err) reject(err);
                 else resolve(row.count);
@@ -102,11 +103,11 @@ router.get('/', adminAuth, async (req, res) => {
                         completed: 0,
                         cancelled: 0
                     };
-                    
+
                     rows.forEach(row => {
                         statistics[row.status] = row.count;
                     });
-                    
+
                     resolve(statistics);
                 }
             });
@@ -117,12 +118,13 @@ router.get('/', adminAuth, async (req, res) => {
             installationJobs,
             technicians,
             stats,
+            page: 'installations',
             pagination: {
-                currentPage: page,
+                currentPage: currentPage,
                 totalPages,
                 totalJobs,
-                hasNext: page < totalPages,
-                hasPrev: page > 1
+                hasNext: currentPage < totalPages,
+                hasPrev: currentPage > 1
             },
             search,
             status,
@@ -131,21 +133,13 @@ router.get('/', adminAuth, async (req, res) => {
                 logo_filename: getSetting('logo_filename', 'logo.png'),
                 company_header: getSetting('company_header', 'GEMBOK')
             },
-            versionInfo: {
-                version: '1.0.0',
-                buildNumber: '001',
-                versionDate: '2024-01-01',
-                companyHeader: getSetting('company_header', 'GEMBOK')
-            },
-            versionBadge: {
-                class: 'badge-primary',
-                text: 'v1.0.0'
-            }
+            versionInfo: getVersionInfo(),
+            versionBadge: getVersionBadge()
         });
 
     } catch (error) {
         logger.error('Error loading installation jobs:', error);
-        res.status(500).send('Internal Server Error');
+        res.status(500).send('Internal Server Error: ' + error.message);
     }
 });
 
@@ -156,7 +150,7 @@ router.get('/create', adminAuth, async (req, res) => {
     try {
         // Get packages untuk dropdown
         const packages = await billingManager.getPackages();
-        
+
         // Get technicians untuk assignment
         const technicians = await new Promise((resolve, reject) => {
             db.all('SELECT id, name, phone FROM technicians WHERE is_active = 1 ORDER BY name', (err, rows) => {
@@ -174,16 +168,8 @@ router.get('/create', adminAuth, async (req, res) => {
                 logo_filename: getSetting('logo_filename', 'logo.png'),
                 company_header: getSetting('company_header', 'GEMBOK')
             },
-            versionInfo: {
-                version: '1.0.0',
-                buildNumber: '001',
-                versionDate: '2024-01-01',
-                companyHeader: getSetting('company_header', 'GEMBOK')
-            },
-            versionBadge: {
-                class: 'badge-primary',
-                text: 'v1.0.0'
-            }
+            versionInfo: getVersionInfo(),
+            versionBadge: getVersionBadge()
         });
 
     } catch (error) {
@@ -240,7 +226,7 @@ router.post('/create', adminAuth, async (req, res) => {
         // Generate job number
         const now = new Date();
         const datePrefix = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0');
-        
+
         const lastJobNumber = await new Promise((resolve, reject) => {
             db.get(
                 'SELECT job_number FROM installation_jobs WHERE job_number LIKE ? ORDER BY job_number DESC LIMIT 1',
@@ -285,7 +271,7 @@ router.post('/create', adminAuth, async (req, res) => {
                 initialStatus, priority || 'normal', notes || null, equipment_needed || null,
                 estimated_duration || 120, customer_latitude || null, customer_longitude || null,
                 req.session.adminUser || 'admin'
-            ], function(err) {
+            ], function (err) {
                 if (err) reject(err);
                 else resolve(this.lastID);
             });
@@ -406,16 +392,8 @@ router.get('/edit/:id', adminAuth, async (req, res) => {
                 logo_filename: getSetting('logo_filename', 'logo.png'),
                 company_header: getSetting('company_header', 'GEMBOK')
             },
-            versionInfo: {
-                version: '1.0.0',
-                buildNumber: '001',
-                versionDate: '2024-01-01',
-                companyHeader: getSetting('company_header', 'GEMBOK')
-            },
-            versionBadge: {
-                class: 'badge-primary',
-                text: 'v1.0.0'
-            }
+            versionInfo: getVersionInfo(),
+            versionBadge: getVersionBadge()
         });
 
     } catch (error) {
@@ -464,7 +442,7 @@ router.put('/update/:id', adminAuth, async (req, res) => {
                     updated_at = CURRENT_TIMESTAMP
                 WHERE id = ?
             `;
-            
+
             db.run(updateQuery, [
                 customer_name, customer_phone, customer_address,
                 package_id, installation_date, installation_time,
@@ -486,7 +464,7 @@ router.put('/update/:id', adminAuth, async (req, res) => {
                         job_id, old_status, new_status, changed_by_type, changed_by_id, notes
                     ) VALUES (?, ?, ?, 'admin', ?, ?)
                 `, [
-                    jobId, currentJob.status, status, 
+                    jobId, currentJob.status, status,
                     req.session.adminUser || 'admin',
                     `Status diubah dari ${currentJob.status} ke ${status}`
                 ], (err) => {
@@ -805,16 +783,8 @@ router.get('/view/:id', adminAuth, async (req, res) => {
                     logo_filename: getSetting('logo_filename', 'logo.png'),
                     company_header: getSetting('company_header', 'GEMBOK')
                 },
-                versionInfo: {
-                    version: '1.0.0',
-                    buildNumber: '001',
-                    versionDate: '2024-01-01',
-                    companyHeader: getSetting('company_header', 'GEMBOK')
-                },
-                versionBadge: {
-                    class: 'badge-primary',
-                    text: 'v1.0.0'
-                }
+                versionInfo: getVersionInfo(),
+            versionBadge: getVersionBadge()
             });
         }
 
@@ -847,16 +817,8 @@ router.get('/view/:id', adminAuth, async (req, res) => {
                 logo_filename: getSetting('logo_filename', 'logo.png'),
                 company_header: getSetting('company_header', 'GEMBOK')
             },
-            versionInfo: {
-                version: '1.0.0',
-                buildNumber: '001',
-                versionDate: '2024-01-01',
-                companyHeader: getSetting('company_header', 'GEMBOK')
-            },
-            versionBadge: {
-                class: 'badge-primary',
-                text: 'v1.0.0'
-            }
+            versionInfo: getVersionInfo(),
+            versionBadge: getVersionBadge()
         });
 
     } catch (error) {
@@ -868,16 +830,8 @@ router.get('/view/:id', adminAuth, async (req, res) => {
                 logo_filename: getSetting('logo_filename', 'logo.png'),
                 company_header: getSetting('company_header', 'GEMBOK')
             },
-            versionInfo: {
-                version: '1.0.0',
-                buildNumber: '001',
-                versionDate: '2024-01-01',
-                companyHeader: getSetting('company_header', 'GEMBOK')
-            },
-            versionBadge: {
-                class: 'badge-primary',
-                text: 'v1.0.0'
-            }
+            versionInfo: getVersionInfo(),
+            versionBadge: getVersionBadge()
         });
     }
 });
@@ -988,8 +942,8 @@ router.post('/assign-technician', adminAuth, async (req, res) => {
                     updated_at = CURRENT_TIMESTAMP
                 WHERE id = ?
             `;
-            
-            db.run(updateQuery, [technicianId, priority || 'normal', notes || null, jobId], function(err) {
+
+            db.run(updateQuery, [technicianId, priority || 'normal', notes || null, jobId], function (err) {
                 if (err) reject(err);
                 else resolve(this);
             });
@@ -998,7 +952,7 @@ router.post('/assign-technician', adminAuth, async (req, res) => {
         // Send WhatsApp notification to technician
         try {
             const whatsappNotifications = require('../config/whatsapp-notifications');
-            
+
             // Prepare customer data
             const customer = {
                 name: job.customer_name,
@@ -1014,9 +968,9 @@ router.post('/assign-technician', adminAuth, async (req, res) => {
 
             // Send notification
             const notificationResult = await whatsappNotifications.sendInstallationJobNotification(
-                technician, 
-                job, 
-                customer, 
+                technician,
+                job,
+                customer,
                 package
             );
 
@@ -1059,7 +1013,7 @@ router.post('/assign-technician', adminAuth, async (req, res) => {
 router.get('/api/search-customers', adminAuth, async (req, res) => {
     try {
         const { q: searchTerm } = req.query;
-        
+
         if (!searchTerm || searchTerm.length < 2) {
             return res.json({
                 success: true,
@@ -1067,16 +1021,16 @@ router.get('/api/search-customers', adminAuth, async (req, res) => {
                 message: 'Minimal 2 karakter untuk pencarian'
             });
         }
-        
+
         // Search customers in billing database
         const customers = await billingManager.searchCustomers(searchTerm);
-        
+
         res.json({
             success: true,
             customers: customers || [],
             count: customers ? customers.length : 0
         });
-        
+
     } catch (error) {
         logger.error('Error searching customers:', error);
         res.status(500).json({
@@ -1093,21 +1047,21 @@ router.get('/api/search-customers', adminAuth, async (req, res) => {
 router.get('/api/customer/:id', adminAuth, async (req, res) => {
     try {
         const { id } = req.params;
-        
+
         const customer = await billingManager.getCustomerById(id);
-        
+
         if (!customer) {
             return res.status(404).json({
                 success: false,
                 message: 'Customer tidak ditemukan'
             });
         }
-        
+
         res.json({
             success: true,
             customer
         });
-        
+
     } catch (error) {
         logger.error('Error getting customer details:', error);
         res.status(500).json({
