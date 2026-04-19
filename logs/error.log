@@ -11956,3 +11956,587 @@
   "message": "Cannot read properties of undefined (reading 'id')",
   "stack": "TypeError: Cannot read properties of undefined (reading 'id')\n    at Object.sendMessage (file:///C:/Users/DELL/Desktop/gembok-bill-main/node_modules/@whiskeysockets/baileys/lib/Socket/messages-send.js:862:48)\n    at AgentWhatsAppManager.sendBalanceUpdateNotification (C:\\Users\\DELL\\Desktop\\gembok-bill-main\\config\\agentWhatsApp.js:230:33)\n    at C:\\Users\\DELL\\Desktop\\gembok-bill-main\\routes\\adminAgents.js:698:43"
 }
+[2026-04-19T04:38:13.656Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:38:13.661Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:39:13.661Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:39:13.662Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:39:45.553Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:39:45.554Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:39:45.556Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:39:55.636Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:40:05.657Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:40:05.658Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:40:05.660Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:40:15.677Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:40:15.679Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:40:25.688Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:40:25.689Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:40:35.699Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:40:45.721Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:40:55.747Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:41:05.781Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:41:05.783Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:41:15.816Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:41:25.839Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:41:35.875Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:41:45.899Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:41:55.927Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:42:05.968Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:42:05.969Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:42:16.005Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:42:16.007Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:42:16.008Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:42:26.032Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:42:36.054Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:42:46.069Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:42:56.113Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:43:06.161Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:43:06.163Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:43:58.533Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:43:58.534Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:43:58.536Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:44:08.556Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:44:08.557Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:44:18.572Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:44:28.587Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:45:11.486Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:45:11.489Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:45:11.491Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:45:11.493Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:45:11.495Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:45:23.576Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:45:33.604Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:45:45.881Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:45:45.883Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:45:45.884Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:45:55.928Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:46:05.951Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:46:05.953Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:46:15.978Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:46:25.992Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:46:25.994Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:46:25.995Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:46:36.012Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:46:36.014Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:46:46.023Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:46:46.024Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:46:56.050Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:47:06.064Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:47:06.065Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:47:16.080Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:47:26.119Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:47:36.144Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:47:46.185Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:48:13.708Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:48:13.710Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:49:13.714Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:49:13.715Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:50:13.711Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:50:13.713Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:51:13.739Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:51:13.741Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:52:13.737Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:52:13.739Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:52:43.782Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:52:43.783Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:52:43.784Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:52:53.804Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:52:53.807Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:53:03.821Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:53:03.830Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:53:03.832Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:53:13.851Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:53:23.864Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:53:33.887Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:53:33.889Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:53:43.941Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:53:43.943Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:53:43.945Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:53:53.980Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:54:13.756Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:54:13.757Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:54:59.306Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:54:59.307Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:54:59.309Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:55:09.338Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:55:09.339Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:55:19.357Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:55:29.377Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:55:39.401Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:55:49.418Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:55:59.450Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:56:09.465Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:56:09.467Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:56:19.506Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:56:29.530Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:56:39.544Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:56:39.546Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:56:49.562Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:56:49.572Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:56:59.584Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:56:59.586Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:57:13.763Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:57:13.765Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:58:13.772Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:58:13.774Z] [ERROR] No Mikrotik connection available
+[2026-04-19T04:59:13.771Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T04:59:13.772Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:00:00.061Z] [ERROR] Error in cleanupExpiredVoucherInvoices:
+{
+  "name": "Error",
+  "message": "Cannot find module './settings'\nRequire stack:\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing-commands.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\whatsapp.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\app.js",
+  "stack": "Error: Cannot find module './settings'\nRequire stack:\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing-commands.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\whatsapp.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\app.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)\n    at Module._load (node:internal/modules/cjs/loader:1038:27)\n    at Module.require (node:internal/modules/cjs/loader:1289:19)\n    at require (node:internal/modules/helpers:182:18)\n    at C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing.js:2729:36\n    at new Promise (<anonymous>)\n    at BillingManager.cleanupExpiredVoucherInvoices (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing.js:2728:16)\n    at InvoiceScheduler.cleanupExpiredVoucherInvoices (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\scheduler.js:430:49)\n    at cron.schedule.scheduled (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\scheduler.js:50:28)\n    at Runner.onMatch (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\node-cron\\dist\\cjs\\tasks\\inline-scheduled-task.js:69:20)\n    at Timeout._onTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\node-cron\\dist\\cjs\\scheduler\\runner.js:70:55)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)"
+}
+[2026-04-19T05:00:00.063Z] [ERROR] Error in voucher cleanup:
+{
+  "name": "Error",
+  "message": "Cannot find module './settings'\nRequire stack:\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing-commands.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\whatsapp.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\app.js",
+  "stack": "Error: Cannot find module './settings'\nRequire stack:\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing-commands.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\whatsapp.js\n- C:\\Users\\heruu\\Desktop\\gembok-bill\\app.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)\n    at Module._load (node:internal/modules/cjs/loader:1038:27)\n    at Module.require (node:internal/modules/cjs/loader:1289:19)\n    at require (node:internal/modules/helpers:182:18)\n    at C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing.js:2729:36\n    at new Promise (<anonymous>)\n    at BillingManager.cleanupExpiredVoucherInvoices (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\billing.js:2728:16)\n    at InvoiceScheduler.cleanupExpiredVoucherInvoices (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\scheduler.js:430:49)\n    at cron.schedule.scheduled (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\scheduler.js:50:28)\n    at Runner.onMatch (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\node-cron\\dist\\cjs\\tasks\\inline-scheduled-task.js:69:20)\n    at Timeout._onTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\node-cron\\dist\\cjs\\scheduler\\runner.js:70:55)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)"
+}
+[2026-04-19T05:00:00.076Z] [ERROR] Error in automatic voucher cleanup request:
+[2026-04-19T05:00:13.781Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:00:13.784Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:01:13.789Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:01:13.790Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:02:13.802Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:02:13.804Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:03:13.817Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:03:13.818Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:04:13.827Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:04:13.829Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:05:13.840Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:05:13.841Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:06:13.850Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:06:13.852Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:34:51.936Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:34:51.939Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:34:51.941Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:35:02.021Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:35:12.042Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:35:22.078Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:35:32.100Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:35:42.284Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:35:42.286Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:36:42.291Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:36:42.292Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:37:42.286Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:37:42.287Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:38:42.292Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:38:42.294Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:39:42.309Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:39:42.311Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:40:04.151Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:40:04.153Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:40:04.154Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:40:42.331Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:40:42.332Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:41:42.327Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:41:42.329Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:42:42.327Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:42:42.328Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:43:41.568Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:43:41.570Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:43:41.571Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:43:51.649Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:44:01.682Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:44:11.709Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:44:11.711Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:44:21.788Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:44:21.790Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:44:21.791Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:44:31.801Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:44:31.803Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:45:23.334Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:45:23.336Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:46:23.328Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:46:23.329Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:47:23.340Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:47:23.341Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:47:56.485Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:47:56.486Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:47:56.488Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:48:06.525Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:48:23.336Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:48:23.339Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:49:23.341Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:49:23.343Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:50:23.347Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:50:23.349Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:51:23.361Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:51:23.363Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:52:23.364Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:52:23.367Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:53:23.373Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:53:23.375Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:53:23.377Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:53:33.388Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:53:33.391Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:53:43.405Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:53:43.407Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:54:02.733Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:54:02.735Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:54:02.736Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:54:12.766Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:54:22.784Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:54:22.786Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:54:32.810Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:54:42.832Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:55:23.122Z] [ERROR] Error getting GenieACS stats:
+{
+  "name": "AxiosError",
+  "message": "timeout of 5000ms exceeded",
+  "stack": "AxiosError: timeout of 5000ms exceeded\n    at RedirectableRequest.handleRequestTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\axios\\dist\\node\\axios.cjs:3329:15)\n    at RedirectableRequest.emit (node:events:524:28)\n    at Timeout._onTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\follow-redirects\\index.js:233:12)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)\n    at Axios.request (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\axios\\dist\\node\\axios.cjs:4339:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Object.getDevices (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\genieacs.js:42:30)\n    at async getDevicesCached (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\genieacs.js:786:21)\n    at async C:\\Users\\heruu\\Desktop\\gembok-bill\\routes\\technicianDashboard.js:2059:25"
+}
+[2026-04-19T05:55:23.379Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:55:23.381Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:55:40.227Z] [ERROR] Error loading technician monitoring:
+{
+  "name": "AxiosError",
+  "message": "timeout of 5000ms exceeded",
+  "stack": "AxiosError: timeout of 5000ms exceeded\n    at RedirectableRequest.handleRequestTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\axios\\dist\\node\\axios.cjs:3329:15)\n    at RedirectableRequest.emit (node:events:524:28)\n    at Timeout._onTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\follow-redirects\\index.js:233:12)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)\n    at Axios.request (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\axios\\dist\\node\\axios.cjs:4339:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Object.getDevices (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\genieacs.js:42:30)\n    at async getDevicesCached (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\genieacs.js:786:21)\n    at async C:\\Users\\heruu\\Desktop\\gembok-bill\\routes\\technicianDashboard.js:99:28"
+}
+[2026-04-19T05:55:43.429Z] [ERROR] Error loading technician monitoring:
+{
+  "name": "AxiosError",
+  "message": "timeout of 5000ms exceeded",
+  "stack": "AxiosError: timeout of 5000ms exceeded\n    at RedirectableRequest.handleRequestTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\axios\\dist\\node\\axios.cjs:3329:15)\n    at RedirectableRequest.emit (node:events:524:28)\n    at Timeout._onTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\follow-redirects\\index.js:233:12)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)\n    at Axios.request (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\axios\\dist\\node\\axios.cjs:4339:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Object.getDevices (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\genieacs.js:42:30)\n    at async getDevicesCached (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\genieacs.js:786:21)\n    at async C:\\Users\\heruu\\Desktop\\gembok-bill\\routes\\technicianDashboard.js:99:28"
+}
+[2026-04-19T05:56:20.872Z] [ERROR] Error getting GenieACS stats:
+{
+  "name": "AxiosError",
+  "message": "timeout of 5000ms exceeded",
+  "stack": "AxiosError: timeout of 5000ms exceeded\n    at RedirectableRequest.handleRequestTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\axios\\dist\\node\\axios.cjs:3329:15)\n    at RedirectableRequest.emit (node:events:524:28)\n    at Timeout._onTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\follow-redirects\\index.js:233:12)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)\n    at Axios.request (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\axios\\dist\\node\\axios.cjs:4339:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Object.getDevices (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\genieacs.js:42:30)\n    at async getDevicesCached (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\genieacs.js:786:21)\n    at async C:\\Users\\heruu\\Desktop\\gembok-bill\\routes\\technicianDashboard.js:2059:25"
+}
+[2026-04-19T05:56:23.402Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:56:23.404Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:56:25.670Z] [ERROR] Error loading technician monitoring:
+{
+  "name": "AxiosError",
+  "message": "timeout of 5000ms exceeded",
+  "stack": "AxiosError: timeout of 5000ms exceeded\n    at RedirectableRequest.handleRequestTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\axios\\dist\\node\\axios.cjs:3329:15)\n    at RedirectableRequest.emit (node:events:524:28)\n    at Timeout._onTimeout (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\follow-redirects\\index.js:233:12)\n    at listOnTimeout (node:internal/timers:581:17)\n    at process.processTimers (node:internal/timers:519:7)\n    at Axios.request (C:\\Users\\heruu\\Desktop\\gembok-bill\\node_modules\\axios\\dist\\node\\axios.cjs:4339:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Object.getDevices (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\genieacs.js:42:30)\n    at async getDevicesCached (C:\\Users\\heruu\\Desktop\\gembok-bill\\config\\genieacs.js:786:21)\n    at async C:\\Users\\heruu\\Desktop\\gembok-bill\\routes\\technicianDashboard.js:99:28"
+}
+[2026-04-19T05:57:23.408Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:57:23.410Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:58:23.424Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:58:23.426Z] [ERROR] No Mikrotik connection available
+[2026-04-19T05:59:23.420Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T05:59:23.422Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:00:23.438Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:00:23.439Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:01:23.436Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:01:23.438Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:02:23.447Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:02:23.449Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:03:23.459Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:03:23.460Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:04:23.466Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:04:23.468Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:04:48.148Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:04:48.151Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:04:48.152Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:04:58.180Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:05:08.203Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:05:18.220Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:05:18.222Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:05:28.263Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:10:06.286Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:10:06.297Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:10:06.326Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:10:06.328Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:10:57.118Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:10:57.121Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:11:07.138Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:11:07.140Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:11:43.613Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:11:43.614Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:12:09.659Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:12:09.660Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:12:09.661Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:12:19.823Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:12:29.833Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:12:39.856Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:12:39.857Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:12:39.870Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:12:50.179Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:12:50.180Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:13:00.196Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:13:10.212Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:13:20.228Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:13:30.243Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:13:30.244Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:13:30.245Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:13:40.259Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:13:40.261Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:13:51.821Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:13:51.822Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:13:51.823Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:14:01.838Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:14:11.856Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:14:21.872Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:14:21.873Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:14:31.887Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:14:31.888Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:14:31.889Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:14:41.891Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:14:41.892Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:14:41.893Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:14:51.901Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:15:01.907Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:15:11.932Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:15:21.948Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:15:31.962Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:15:41.985Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:15:41.989Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:15:48.275Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:15:52.029Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:15:52.030Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:16:15.188Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:16:26.955Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:16:26.956Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:16:26.957Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:16:36.975Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:16:47.003Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:16:57.010Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:17:07.032Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:17:07.033Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:17:17.041Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:17:27.053Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:18:02.290Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:18:12.727Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:18:12.729Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:18:12.730Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:18:22.792Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:18:32.809Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:18:32.811Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:18:42.824Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:18:42.825Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:18:52.842Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:18:52.843Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:19:02.857Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:19:02.858Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:19:02.859Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:19:02.861Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:19:13.823Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:20:01.750Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:20:01.752Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:21:01.761Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:21:01.762Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:21:14.607Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:21:14.608Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:21:14.609Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:21:14.610Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:21:25.094Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:21:25.095Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:21:25.096Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:21:55.289Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:21:55.290Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:21:55.292Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:21:55.293Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:22:50.499Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:22:50.501Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:22:50.505Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:22:50.508Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:22:50.509Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:22:50.690Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:22:50.691Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:22:54.267Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:22:57.262Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:00.269Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:03.267Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:06.268Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:08.694Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:12.266Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:15.265Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:18.267Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:21.267Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:22.717Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:22.718Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:23:24.269Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:27.280Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:30.261Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:33.263Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:36.267Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:39.269Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:42.269Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: 
+[2026-04-19T06:23:47.761Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:23:49.358Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:00.456Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:03.218Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:06.394Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:09.363Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:12.128Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:15.609Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:17.865Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:20.946Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:24.108Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:27.283Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:29.945Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:33.338Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:36.089Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:39.775Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:41.926Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:44.895Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:48.173Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:51.040Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:53.907Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:24:57.082Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:00.051Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:03.430Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:06.912Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:09.165Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:14.836Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:15.514Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:17.824Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:31.089Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:33.915Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:37.243Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:40.191Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:42.853Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:45.925Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:48.407Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:52.274Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:54.220Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:25:58.315Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:01.285Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:04.245Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:07.019Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:10.092Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:13.370Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:16.339Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:19.001Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:21.625Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:24.428Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:27.398Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:30.547Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:33.541Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:36.614Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:40.095Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:42.254Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:45.317Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:48.492Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:51.359Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:54.329Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:26:57.503Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:27:00.370Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:27:03.442Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:27:58.126Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:00.889Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:03.857Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:06.725Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:09.797Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:13.176Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:15.738Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:18.912Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:21.894Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:24.852Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:27.688Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:30.737Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:33.693Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:36.831Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:40.108Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:42.905Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:45.945Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:49.325Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:51.884Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:55.161Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:28:57.823Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:00.894Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:03.967Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:06.732Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:10.008Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:13.183Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:16.158Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:18.917Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:21.989Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:25.755Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:27.826Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:30.898Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:33.969Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:36.837Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:40.113Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:42.878Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:45.869Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:48.920Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:51.889Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:55.063Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:29:58.155Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:01.105Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:03.870Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:06.840Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:10.014Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:12.783Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:15.851Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:18.923Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:22.085Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:24.658Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:27.781Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:30.751Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:33.719Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:36.946Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:30:40.224Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:36:08.941Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:36:10.563Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:36:13.942Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:36:45.483Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:36:48.144Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:37:25.621Z] [ERROR] ❌ [MIKROTIK] Gagal koneksi: Initial handshake timeout
+[2026-04-19T06:37:25.622Z] [ERROR] No Mikrotik connection available
+[2026-04-19T06:37:38.000Z] [ERROR] ⚠️ [MIKROTIK] Connection Error: 
+[2026-04-19T06:43:17.468Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:19.861Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:23.303Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:26.154Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:29.037Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:32.109Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:34.866Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:38.162Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:40.915Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:44.172Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:47.162Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:49.927Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:52.999Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:56.072Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:43:59.143Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:44:02.253Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:44:05.408Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:44:08.154Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:44:11.152Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:44:14.503Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:44:17.073Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:44:20.238Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:44:34.574Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:45:34.374Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:28.646Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:29.567Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:31.936Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:34.995Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:36.330Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:40.320Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:43.084Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:46.463Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:48.922Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:51.857Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:57.322Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:46:58.342Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:01.209Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:04.383Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:07.051Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:10.230Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:13.198Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:16.459Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:19.231Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:21.908Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:25.682Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:28.037Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:31.008Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:34.079Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:36.894Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:40.018Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:43.090Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:46.264Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:49.568Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:52.511Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:55.086Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:47:58.166Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:48:01.251Z] [ERROR] Error getting interface traffic: - input does not match any value of interface
+[2026-04-19T06:48:04.399Z] [ERROR] Error getting interface traffic: - input does not match any value of interface

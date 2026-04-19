@@ -29,7 +29,7 @@ function loadVersionFromFile() {
         console.error('Error loading version.json:', e);
         return {
             version: '2.1.2',
-            version_name: 'GEMBOK-BILLING',
+            version_name: 'BILLING SYSTEM',
             version_date: '2025-10-13',
             version_notes: 'No release notes',
             build_number: '20251013',
@@ -51,8 +51,8 @@ function getVersionInfo() {
         versionDate: versionData.version_date || 'Unknown Date',
         versionNotes: versionData.version_notes || 'No release notes',
         buildNumber: versionData.build_number || 'Unknown Build',
-        companyHeader: settings.company_header || 'GEMBOK',
-        footerInfo: settings.footer_info || 'Info Hubungi : 081947215703',
+        companyHeader: settings.company_header || 'BILLING SYSTEM',
+        footerInfo: settings.footer_info || 'Info Hubungi : 08977345640',
         changelog: versionData.changelog || []
     };
 }

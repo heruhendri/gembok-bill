@@ -10987,3 +10987,80 @@
 [2025-10-24T01:37:50.708Z] [WARN] WhatsApp socket not available for agent notification
 [2025-10-24T01:45:33.872Z] [WARN] No technician group configured for PPPoE notifications
 [2025-10-24T01:47:33.906Z] [WARN] No technician group configured for PPPoE notifications
+[2026-04-19T04:38:13.671Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:39:13.663Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:40:05.662Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:41:05.785Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:42:05.973Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:43:06.166Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:44:08.559Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:45:11.496Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:46:05.956Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:47:06.067Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:48:13.711Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:49:13.717Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:50:13.714Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:51:13.742Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:52:13.740Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:53:03.834Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:54:13.758Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:55:09.342Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:56:09.469Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:57:13.766Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:58:13.775Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T04:59:13.773Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:00:13.785Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:01:13.792Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:02:13.805Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:03:13.820Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:04:13.830Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:05:13.843Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:06:13.853Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:35:42.288Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:36:42.294Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:37:42.289Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:38:42.295Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:39:42.313Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:40:42.334Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:41:42.331Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:42:42.329Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:44:21.799Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:45:23.337Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:46:23.330Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:47:23.342Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:48:23.340Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:49:23.344Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:50:23.350Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:51:23.364Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:52:23.368Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:53:23.378Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:54:22.788Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:55:23.383Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:56:23.405Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:57:23.412Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:58:23.427Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T05:59:23.423Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:00:23.441Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:01:23.439Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:02:23.451Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:03:23.462Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:04:23.470Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:05:18.224Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:10:06.299Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:10:06.330Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:11:43.615Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:12:39.875Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:13:40.262Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:14:41.894Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:15:41.995Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:17:07.035Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:18:52.847Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:20:01.753Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:21:01.763Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:21:55.294Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:23:22.719Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:24:46.760Z] [WARN] No technician group configured for PPPoE notifications
+[2026-04-19T06:26:14.398Z] [WARN] No technician group configured for PPPoE notifications
+[2026-04-19T06:37:25.624Z] [WARN] Monitoring PPPoE connections failed: Koneksi ke Mikrotik gagal
+[2026-04-19T06:38:21.125Z] [WARN] No technician group configured for PPPoE notifications
+[2026-04-19T06:40:15.608Z] [WARN] No technician group configured for PPPoE notifications

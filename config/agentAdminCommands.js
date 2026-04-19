@@ -540,7 +540,7 @@ Contoh: tolakrequest 1 Data tidak lengkap`);
     // Show agent help
     async handleAgentHelp(remoteJid) {
         const settings = getSettingsWithCache();
-        const companyHeader = settings.company_header || settings.app_name || 'GEMBOK-BILLING';
+        const companyHeader = settings.company_header || settings.app_name || 'TEST-BILLING';
         const formattedHeader = companyHeader.includes('📱') ? companyHeader + '\n\n' : `📱 ${companyHeader} 📱\n\n`;
         
         const message = `${formattedHeader}🤖 *PERINTAH ADMIN AGENT*

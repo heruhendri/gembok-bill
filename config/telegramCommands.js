@@ -95,7 +95,7 @@ class TelegramCommands {
      */
     async handleStart(ctx) {
         const welcomeMessage = `
-🤖 *Selamat datang di GEMBOK-BILL Bot*
+🤖 *Selamat datang di BILLING Bot*
 
 Bot ini membantu Anda mengelola sistem ISP dengan mudah melalui Telegram.
 
@@ -120,7 +120,7 @@ Bot ini membantu Anda mengelola sistem ISP dengan mudah melalui Telegram.
         const session = await telegramAuth.getSession(ctx.from.id);
 
         let helpMessage = `
-📚 *GEMBOK-BILL Bot - Panduan Penggunaan*
+📚 *BILLING Bot - Panduan Penggunaan*
 
 *🔐 Authentication:*
 • \`/login <username> <password>\` - Login ke bot
@@ -256,7 +256,7 @@ Bot ini membantu Anda mengelola sistem ISP dengan mudah melalui Telegram.
             ]
         ]);
 
-        await ctx.reply('📱 *Menu Utama GEMBOK-BILLING*', {
+        await ctx.reply('📱 *Menu Utama BILLING-Bot*', {
             parse_mode: 'Markdown',
             ...menuKeyboard
         });
@@ -533,7 +533,7 @@ Bot ini membantu Anda mengelola sistem ISP dengan mudah melalui Telegram.
             const totalUnpaid = unpaidInvoices.reduce((sum, inv) => sum + (inv.amount || 0), 0);
 
             const message = `
-📊 *Dashboard GEMBOK-BILL*
+📊 *Dashboard BILLING-Bot*
 
 👥 *Pelanggan:*
 • Total: ${customers.length}

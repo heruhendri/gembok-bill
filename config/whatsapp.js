@@ -462,13 +462,13 @@ async function connectToWhatsApp() {
                             const phoneNumber = sock.user?.id?.split(':')[0] || 'Unknown';
                             const welcomeMessage = `*Selamat datang!*\n\n` +
                                 `Aplikasi WhatsApp Bot berhasil dijalankan.\n\n` +
-                                `Rekening untuk pengembangan aplikasi GEMBOK\n` +
-                                `4206 01 003 953 53 1\n` +
-                                `BRI a.n. WARJAYA\n\n` +
+                                `Rekening untuk pengembangan aplikasi BILLING\n` +
+                                `855-077-3253\n` +
+                                `BCA a.n. WARJAYA\n\n` +
                                 `Donasi melalui e-wallet:\n` +
-                                `081947215703\n\n` +
+                                `08977345640\n\n` +
                                 `Terima kasih atas partisipasi dan dukungan Anda 🙏\n\n` +
-                                `Info Hubungi : 081947215703`;
+                                `Info Hubungi : 08977345640`;
                             
                             // Kirim pesan ke superadmin
                             await sock.sendMessage(`${superAdminNumber}@s.whatsapp.net`, {
