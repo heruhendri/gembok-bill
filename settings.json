@@ -41,7 +41,7 @@
   "offline_notification_interval": "43200000",
   "offline_device_threshold_hours": "24",
   "user_auth_mode": "mikrotik",
-  "server_port": "80",
+  "server_port": "4555",
   "logo_filename": "logo.jpg",
   "company_website": "https://hendrii.web.id",
   "company_slogan": "Solusi Internet Terdepan",
