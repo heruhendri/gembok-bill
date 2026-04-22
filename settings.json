@@ -41,7 +41,7 @@
   "offline_notification_interval": "43200000",
   "offline_device_threshold_hours": "24",
   "user_auth_mode": "mikrotik",
-  "server_port": "4555",
+  "server_port": "80",
   "logo_filename": "logo.jpg",
   "company_website": "https://hendrii.web.id",
   "company_slogan": "Solusi Internet Terdepan",
@@ -58,11 +58,12 @@
   "payment_gateway": {
     "active": "midtrans",
     "midtrans": {
-      "enabled": true,
+      "enabled": false,
       "production": false,
       "server_key": "SB-Mid-server-XXXXXXXXXXXXXXXXXXXXXXXX",
       "client_key": "SB-Mid-client-XXXXXXXXXXXXXXXXXXXXXXXX",
-      "merchant_id": "G123456789"
+      "merchant_id": "G123456789",
+      "base_url": ""
     },
     "xendit": {
       "enabled": false,
