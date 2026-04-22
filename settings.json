@@ -5,10 +5,10 @@
   "genieacs_url": "http://192.168.8.89:7557",
   "genieacs_username": "admin",
   "genieacs_password": "admin",
-  "mikrotik_host": "id-23.hostddns.us:19815",
+  "mikrotik_host": "192.168.8.1",
   "mikrotik_port": "8728",
-  "mikrotik_user": "mikhmon",
-  "mikrotik_password": "rembulan",
+  "mikrotik_user": "admin",
+  "mikrotik_password": "admin",
   "main_interface": "ether1",
   "pppoe_monitor_enable": true,
   "technician_numbers.0": "",
@@ -72,11 +72,12 @@
       "callback_token": "your_callback_token_here"
     },
     "tripay": {
-      "enabled": true,
+      "enabled": false,
       "production": false,
       "api_key": "your_tripay_api_key_here",
       "private_key": "your_tripay_private_key_here",
-      "merchant_code": "your_merchant_code_here"
+      "merchant_code": "your_merchant_code_here",
+      "base_url": ""
     }
   },
   "auto_suspension_enabled": true,
@@ -161,10 +162,10 @@
     "0": {
       "id": "router_1",
       "name": "Router 1",
-      "host": "id-23.hostddns.us",
+      "host": "192.168.1.1",
       "port": "19815",
-      "user": "mikhmon",
-      "password": "rembulan",
+      "user": "admin",
+      "password": "admin",
       "enabled": "true"
     }
   },
